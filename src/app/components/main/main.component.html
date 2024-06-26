@@ -1,0 +1,24 @@
+<!-- Hero Section -->
+<section id="hero" class="hero section">
+
+    <img src="https://wallpaper.forfun.com/fetch/d4/d49ad8ca4c64e1fdc22e65aa0d3b52d1.jpeg" alt="" data-aos="fade-in">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <h2 data-aos="fade-up" data-aos-delay="100">Bienvenido a Nuestras Ciudades</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Obtenga información de nuestros paises</p>
+            </div>
+            <div class="col-lg-5">
+                <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <select class="form-select" aria-label="Default select example">
+                        <option [value]="">Selecione un Pais</option>
+                        <option [value]="country.name" *ngFor="let country of nameCountries">{{ country }}</option>
+                    </select>
+                    <a type="submit" class="btn btn-primary" style="margin-left: 20px;"> Buscar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section><!-- /Hero Section -->
