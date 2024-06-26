@@ -21,9 +21,9 @@
 :root {
     --background-color: #000000;
     /* Background color for the entire website, including individual sections */
-    --default-color: #212529;
+    --default-color: #a4a4a4;
     /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #32353a;
+    --heading-color: #ffffff;
     /* Color for headings, subheadings and title throughout the website */
     --accent-color: #e84545;
     /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -654,7 +654,7 @@ section,
 .section {
     color: var(--default-color);
     background-color: var(--background-color);
-    padding: 60px 0;
+    padding: 120px 0;
     scroll-margin-top: 98px;
     overflow: clip;
 }
@@ -1954,7 +1954,7 @@ section,
   # Portfolio Details Section
   --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
-    width: 100%;
+    width: 50%;
 }
 
 .portfolio-details .swiper-wrapper {

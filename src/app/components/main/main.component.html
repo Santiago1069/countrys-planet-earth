@@ -11,11 +11,11 @@
             </div>
             <div class="col-lg-5">
                 <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <select class="form-select" aria-label="Default select example">
-                        <option [value]="">Selecione un Pais</option>
-                        <option [value]="country.name" *ngFor="let country of nameCountries">{{ country }}</option>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="nameCountryValue" name="nameCountryValue">
+                        <option [value]="" selected >Selecione un Pais</option>
+                        <option [value]="country" *ngFor="let country of nameCountries">{{ country }}</option>
                     </select>
-                    <a type="submit" class="btn btn-primary" style="margin-left: 20px;"> Buscar</a>
+                    <a type="submit" class="btn btn-primary" style="margin-left: 20px;" (click)="searchCountry(nameCountryValue)"> Buscar</a>
                 </form>
             </div>
         </div>

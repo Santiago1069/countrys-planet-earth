@@ -1,11 +1,4 @@
-/**
-* Template Name: Append
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Updated: Jun 14 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-"use strict";
+'use strict';
 
 $(function () {
 

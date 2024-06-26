@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CountryService } from 'src/app/shared/services/country.service';
 import Swal from 'sweetalert2';
 
@@ -10,8 +11,9 @@ import Swal from 'sweetalert2';
 export class MainComponent implements OnInit {
 
   nameCountries: Array<any> = new Array<any>();
+  nameCountryValue: string = '';
 
-  constructor(private countryService: CountryService) { }
+  constructor(private countryService: CountryService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCountries()
@@ -29,5 +31,11 @@ export class MainComponent implements OnInit {
         });
       }
     })
+  }
+
+  searchCountry(nameCountryValue: any) {
+    if (this.nameCountryValue) {
+      this.router.navigate(['/detail-country/', nameCountryValue]);
+    }
   }
 }

@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class CountryService {
 
-  private API_URL = `https://restcountries.com/v3.1/all`
+  private API_URL = `https://restcountries.com/v3.1`
 
   constructor(private http: HttpClient) { }
 
   getCountries(): Observable<any> {
-    return this.http.get<any>(this.API_URL);
+    return this.http.get<any>(`${this.API_URL}/all/`);
+  }
+
+  getCountry(name: string): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/name/${name}`);
   }
 }

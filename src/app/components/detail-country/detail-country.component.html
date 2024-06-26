@@ -4,50 +4,31 @@
     <div class="container" data-aos="fade-up">
 
         <div class="portfolio-details-slider swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "navigation": {
-                  "nextEl": ".swiper-button-next",
-                  "prevEl": ".swiper-button-prev"
-                },
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                }
-              }
-            </script>
             <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/app-1.jpg" alt="">
+                <div class="swiper-slide"
+                    style="display: flex; justify-content: space-around; align-items: center; margin-top: 50px;">
+                    <img src="{{this.detailCountry[0].flags.svg}}" alt="">
+                    <img src="{{this.detailCountry[0].coatOfArms.svg}}" alt="">
                 </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
         </div>
 
         <div class="row justify-content-between gy-4 mt-4">
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-info">
+                    <h3>{{this.detailCountry[0].name.official}}</h3>
+                    <ul>
+                        <li><strong>Capital</strong> {{this.detailCountry[0].capital[0]}}</li>
+                        <li><strong>Continente</strong> {{this.detailCountry[0].continents[0]}}</li>
+                        <li><strong>Lenguaje</strong> {{this.detailCountry[0].languages.spa}} </li>
+                        <li><strong>Km2</strong> {{this.detailCountry[0].area}} Km2</li>
+                        <li><strong>Habitantes</strong> {{this.detailCountry[0].population}}</li>
+                        <li><strong>Nombre de moneda</strong> {{this.detailCountry[0].currencies.COP.name}}</li>
+                        <li><strong>Simbolo</strong> {{this.detailCountry[0].currencies.COP.symbol}}</li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="col-lg-8" data-aos="fade-up">
                 <div class="portfolio-description">
@@ -91,19 +72,6 @@
                         nesciunt.
                     </p>
 
-                </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="portfolio-info">
-                    <h3>Project information</h3>
-                    <ul>
-                        <li><strong>Category</strong> Web design</li>
-                        <li><strong>Client</strong> ASU Company</li>
-                        <li><strong>Project date</strong> 01 March, 2020</li>
-                        <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                        <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-                    </ul>
                 </div>
             </div>
 
