@@ -2,22 +2,45 @@
 <section id="portfolio-details" class="portfolio-details section">
 
     <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" class="d-flex justify-content-center">
+            <div class="portfolio-description">
+                <h1><strong>{{this.detailCountry[0].name.official}}</strong></h1>
+            </div>
+        </div>
 
         <div class="portfolio-details-slider swiper init-swiper">
             <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide"
                     style="display: flex; justify-content: space-around; align-items: center; margin-top: 50px;">
-                    <img src="{{this.detailCountry[0].flags.svg}}" alt="">
-                    <img src="{{this.detailCountry[0].coatOfArms.svg}}" alt="">
+                    <div class="card-group">
+                        <div class="card col-lg-6 d-flex justify-content-center align-items-center"
+                            style="background-color: #ffffff21; padding: 5%; margin: 2%;">
+                            <img src="{{this.detailCountry[0].flags.svg}}" class="card-img-top" alt="...">
+                            <div>
+                                <li style="color: rgb(255, 255, 255);"><strong>Bandera</strong></li>
+                            </div>
+                        </div>
+                        <div class="card col-lg-6 d-flex justify-content-center align-items-center"
+                            style="background-color: #ffffff21; padding: 5%; margin: 2%;">
+                            <img src="{{this.detailCountry[0].coatOfArms.svg}}" class="card-img-top" alt="...">
+                            <div>
+                                <li style="color: rgb(255, 255, 255);"><strong>Escudo</strong></li>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <p style="padding-right: 5%; padding-left: 5%;">
+            {{this.detailCountry[0].flags.alt}}
+        </p>
 
         <div class="row justify-content-between gy-4 mt-4">
 
-            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100" style="padding: 5%;">
                 <div class="portfolio-info">
-                    <h3>{{this.detailCountry[0].name.official}}</h3>
+                    <h3>{{this.detailCountry[0].name.common}}</h3>
                     <ul>
                         <li><strong>Capital</strong> {{this.detailCountry[0].capital[0]}}</li>
                         <li><strong>Continente</strong> {{this.detailCountry[0].continents[0]}}</li>
@@ -26,52 +49,38 @@
                         <li><strong>Habitantes</strong> {{this.detailCountry[0].population}}</li>
                         <li><strong>Nombre de moneda</strong> {{this.detailCountry[0].currencies.COP.name}}</li>
                         <li><strong>Simbolo</strong> {{this.detailCountry[0].currencies.COP.symbol}}</li>
+                        <li><strong>Zona horaria</strong> {{this.detailCountry[0].timezones[0]}}</li>
+                        <li><strong>Dominio de nivel superior</strong> {{this.detailCountry[0].tld[0]}}</li>
+                        <li><strong>Dia que inicia la semana</strong> {{this.detailCountry[0].startOfWeek}}</li>
+                        <li><strong>Limites</strong> <span *ngFor="let border of countryBorders"><a href="/detail-country/{{ border }}">{{border}}</a></span></li>
+                        <li><strong>Independizado</strong><span
+                                *ngIf="this.detailCountry[0].independent == true">Si</span> <span
+                                *ngIf="this.detailCountry[0].independent == false">No</span></li>
+                        <li><strong>Link de maps</strong><a href="{{this.detailCountry[0].maps.googleMaps}}">{{this.detailCountry[0].maps.googleMaps}}</a></li>
+                        <li><strong>Link de openStreetMaps</strong><a href="{{this.detailCountry[0].maps.openStreetMaps}}">{{this.detailCountry[0].maps.openStreetMaps}}</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-lg-8" data-aos="fade-up">
+            <div class="col-lg-8" data-aos="fade-up" style="padding: 5%;">
                 <div class="portfolio-description">
-                    <h2>This is an example of portfolio details</h2>
-                    <p>
-                        Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia
-                        quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim.
-                        Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla
-                        at esse enim cum deserunt eius.
-                    </p>
-                    <p>
-                        Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum
-                        nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus
-                        doloremque nesciunt molestiae laboriosam.
-                    </p>
-
-                    <div class="testimonial-item">
-                        <p>
-                            <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.</span>
-                            <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <div>
-                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                        </div>
-                    </div>
-
-                    <p>
-                        Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et
-                        magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus
-                        deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-                    </p>
-
-                    <p>
-                        Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero.
-                        Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui
-                        nesciunt.
-                    </p>
-
+                    <h2>Traducciones en diferentes idiomas</h2>
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th>Código de lenguaje</th>
+                                <th>Nombre oficial</th>
+                                <th>Nombre común</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let language of languages">
+                                <td><a href="/detail-country/{{ language.code }}">{{ language.code }}</a></td>
+                                <td>{{ language.official }}</td>
+                                <td>{{ language.common }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
