@@ -13,7 +13,7 @@ export class DetailCountryComponent implements OnInit {
   nameCountry: string | null = '';
   detailCountry: any;
   traslationsCountry: any;
-  languages: any[] = [];
+  lenguagesTranslation: any[] = [];
   countryBorders: any[] = [];
 
   constructor(private router: ActivatedRoute, private countryService: CountryService) { }
@@ -31,8 +31,8 @@ export class DetailCountryComponent implements OnInit {
         next: (res) => {
           this.detailCountry = res.map((country: any) => country)
           this.traslationsCountry = this.detailCountry[0].translations;
-          this.countryBorders = this.detailCountry[0].borders
-          this.getLenguages();
+          this.countryBorders = this.detailCountry[0].borders;
+          this.getLenguagesTranslation();
         }, error: (err) => {
           Swal.fire({
             title: "Oops!",
@@ -44,8 +44,8 @@ export class DetailCountryComponent implements OnInit {
     }
   }
 
-  getLenguages() {
-    this.languages = Object.keys(this.traslationsCountry).map(key => {
+  getLenguagesTranslation() {
+    this.lenguagesTranslation = Object.keys(this.traslationsCountry).map(key => {
       return { code: key, ...this.traslationsCountry[key] };
     });
   }
